@@ -1,5 +1,6 @@
 package com.mehrdad.cicdcalculator.domain
 
+import android.util.Log
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 
