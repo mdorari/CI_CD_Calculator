@@ -38,18 +38,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         text = "Hello $name!",
         modifier = modifier
     )
-    val expected = listOf(
-        ExpressionPart.Number(3.0),
-        ExpressionPart.Op(Operation.ADD),
-        ExpressionPart.Number(5.0),
-        ExpressionPart.Op(Operation.SUBTRACT),
-        ExpressionPart.Number(3.0),
-        ExpressionPart.Op(Operation.MULTIPLY),
-        ExpressionPart.Number(4.0),
-        ExpressionPart.Op(Operation.DIVIDE),
-        ExpressionPart.Number(3.0),
-    )
-    Log.d("Mehrdad main", "Greeting: $expected")
 }
 
 @Preview(showBackground = true)
