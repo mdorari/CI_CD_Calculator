@@ -1,7 +1,7 @@
 package com.mehrdad.cicdcalculator.domain
 
 //doing this will help further changes to symbols. Symbols can be changed easily here, not in entire code
-enum class Operation(val symbol:Char) {
+enum class Operation(val symbol: Char) {
     ADD('+'),
     SUBTRACT('-'),
     MULTIPLY('x'),
@@ -10,9 +10,9 @@ enum class Operation(val symbol:Char) {
 }
 
 //to create a string of operation: "+-x/%"
-val operationSymbols = Operation.entries.map { it.symbol }.joinToString { "" }
+val operationSymbols = Operation.values().map { it.symbol }.joinToString("")
 
 fun operationFromSymbol(symbol: Char):Operation{
-    return Operation.entries.find { it.symbol == symbol }
+    return Operation.values().find { it.symbol == symbol }
         ?: throw IllegalArgumentException("Invalid symbol")
 }

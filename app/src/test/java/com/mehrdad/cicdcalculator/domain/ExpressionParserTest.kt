@@ -1,6 +1,5 @@
 package com.mehrdad.cicdcalculator.domain
 
-import android.util.Log
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 
@@ -47,6 +46,6 @@ class ExpressionParserTest {
             ExpressionPart.Number(5.0),
             ExpressionPart.Parentheses(ParenthesesType.Closing),
         )
-        assertThat(expected).isEqualTo(actual)
+        assertThat(actual).isEqualTo(expected)
     }
 }
