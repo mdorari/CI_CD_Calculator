@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.mehrdad.cicdcalculator.domain.ExpressionPart
 import com.mehrdad.cicdcalculator.domain.Operation
+import com.mehrdad.cicdcalculator.presentation.CalculatorScreen
 import com.mehrdad.cicdcalculator.ui.theme.CICDCalculatorTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,29 +22,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             CICDCalculatorTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
+                CalculatorScreen()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CICDCalculatorTheme {
-        Greeting("Android")
     }
 }
